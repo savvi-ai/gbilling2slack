@@ -32,8 +32,8 @@ type ServiceCost struct {
 // < 06/01 - 06/22 > YOUR-PROJECT-ID
 // service name              |    month cost ( day cost )
 // ------------------------------------------------------
-// Cloud Scheduler           |          1 円 (     0 → )
-// Compute Engine            |     15,042 円 (   347 ↑ )
+// Cloud Scheduler           |          1 ₩ (     0 → )
+// Compute Engine            |     15,042 ₩ (   347 ↑ )
 type DetailReport struct {
 	ProjectID        string
 	ServiceCostList  []ServiceCost

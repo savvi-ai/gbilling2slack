@@ -12,5 +12,8 @@
 # below:
 .git
 .gitignore
+.idea/
+.env
+Makefile
 
 node_modules

@@ -96,7 +96,7 @@ func (n *slackNotifier) PostBilling(summaryReport *report.SummaryReport) (string
 	// this loop create cost list per project
 	for _, cost := range summaryReport.ProjectCostList {
 		projectID := cost.ProjectID
-		text += fmt.Sprintf("%*v | %10v 円 ( %5v %v )\n",
+		text += fmt.Sprintf("%*v | %10v ₩ ( %5v %v )\n",
 			padDegree,
 			projectID, humanize.Comma(cost.MonthlyCost),
 			humanize.Comma(cost.DailyCost),
@@ -104,7 +104,7 @@ func (n *slackNotifier) PostBilling(summaryReport *report.SummaryReport) (string
 	}
 
 	text += fmt.Sprintf("―――――――――――――――――――――――――――――――――――――――――――――――――――――\n")
-	text += fmt.Sprintf("%*v | %10v 円 ( %5v %v )\n",
+	text += fmt.Sprintf("%*v | %10v ₩ ( %5v %v )\n",
 		padDegree,
 		"Sum",
 		humanize.Comma(summaryReport.MonthlyTotalCost),
@@ -125,7 +125,7 @@ func (n *slackNotifier) PostBillingThread(parentTS string, detailReport *report.
 			continue
 		}
 
-		text += fmt.Sprintf("%*v | %10v 円 ( %5v %v )\n",
+		text += fmt.Sprintf("%*v | %10v ₩ ( %5v %v )\n",
 			padDegree,
 			c.ServiceName,
 			humanize.Comma(c.MonthlyServiceCost),

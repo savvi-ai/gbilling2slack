@@ -30,11 +30,11 @@ type ProjectCost struct {
 // SummaryReport is represent billing summary message. For example is below.
 //
 // < 06/01 - 06/22 >  Invoice YYYY/MM ( MM/DD 00:00-24:00 )
-// dev-pj                    |          0 円 (     0 → )
-// stg-pj                    |     15,044 円 (   347 ↑ )
-// rcv-pj                    |      5,551 円 (   114 ↑ )
+// dev-pj                    |          0 ₩ (     0 → )
+// stg-pj                    |     15,044 ₩ (   347 ↑ )
+// rcv-pj                    |      5,551 ₩ (   114 ↑ )
 // ―――――――――――――――――――――――――――――
-// Sum                       |     20,596 円 (   462 ↑ )
+// Sum                       |     20,596 ₩ (   462 ↑ )
 type SummaryReport struct {
 	ProjectCostList  []ProjectCost
 	MonthlyTotalCost int64

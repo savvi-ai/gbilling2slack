@@ -7,7 +7,7 @@ export $(shell sed 's/=.*//' .env)
 schedule:
 	gcloud beta scheduler jobs create pubsub notify-billing-to-slack-${tag} \
 	--project savvy-kit-260206 \
-	--schedule "00 12 * * *" \
+	--schedule "${cron}" \
 	--topic topic-billing \
 	--message-body="execute" \
 	--time-zone "Asia/Seoul" \
